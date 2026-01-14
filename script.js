@@ -1,4 +1,8 @@
 const planningBtnAction = document.getElementById("createPlanningBtn"); 
+const accueilVue = document.getElementById("accueil");
+const planningVue = document.getElementById("planning")
+
 planningBtnAction.addEventListener("click",function() {
-  console.log("Done");
+  accueilVue.style.display = "none";
+  planningVue.style.display = "block";
 });
