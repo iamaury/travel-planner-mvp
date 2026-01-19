@@ -1,6 +1,6 @@
 const planningBtnAction = document.getElementById("createPlanningBtn"); 
 const joinPlanningBtnAction = document.getElementById("joinPlanningBtn");
-const planningBtnCode = document.getElementById("joinPlanningCode");
+const planningCode = document.getElementById("joinPlanningCode");
 const accueilVue = document.getElementById("accueil");
 const planningVue = document.getElementById("planning")
 
@@ -10,13 +10,16 @@ planningBtnAction.addEventListener("click",function() {
   accueilVue.style.display = "none";
   planningVue.style.display = "block";
 });
+planningCode.addEventListener("input",function(){
+  planningCode.value = planningCode.value.toUpperCase();
+});  
 joinPlanningBtnAction.addEventListener("click",function() {
-  const code = planningBtnCode.value;
+  const code = planningCode.value;
   const regex = /^[A-Z0-9]{6}$/; 
   if  (regex.test(code)){
   console.log("code ok");
   } else {
-  planningBtnCode.value = "error";
+  planningCode.value = "error";
   }
 });
 
