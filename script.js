@@ -12,6 +12,8 @@ planningBtnAction.addEventListener("click",function() {
 });
 planningCode.addEventListener("input",function(){
   planningCode.value = planningCode.value.toUpperCase();
+  if (planningCode.value.lentgh > 6){
+    planningCode.value = planningCode.value.slice (0,6);
 });  
 joinPlanningBtnAction.addEventListener("click",function() {
   const code = planningCode.value;
