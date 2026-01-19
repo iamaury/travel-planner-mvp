@@ -11,5 +11,12 @@ planningBtnAction.addEventListener("click",function() {
   planningVue.style.display = "block";
 });
 joinPlanningBtnAction.addEventListener("click",function() {
-  console.log(planningBtnCode.value);
+  const code = planningBtnCode.value;
+  const regex = /^[A-Z0-9]{6}$/; 
+  if  (regex.text(code)){
+  console.log("code ok");
+  } else {
+  planningBtnCode.value = "error";
+  }
 });
+
