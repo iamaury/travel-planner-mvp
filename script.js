@@ -13,7 +13,7 @@ planningBtnAction.addEventListener("click",function() {
 joinPlanningBtnAction.addEventListener("click",function() {
   const code = planningBtnCode.value;
   const regex = /^[A-Z0-9]{6}$/; 
-  if  (regex.text(code)){
+  if  (regex.test(code)){
   console.log("code ok");
   } else {
   planningBtnCode.value = "error";
