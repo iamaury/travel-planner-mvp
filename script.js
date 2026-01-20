@@ -24,7 +24,7 @@ let code = "";
 }
 
 planningBtnAction.addEventListener("click", function (){
-  function showPlanningView();
+  showPlanningView();
   const nouvCode = generatePlanningCode();
     console.log(nouvCode); 
   planningCode.value = nouvCode;
