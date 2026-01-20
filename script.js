@@ -8,9 +8,28 @@ const errorMessage = document.getElementById("errorMessage")
 planningVue.style.display = "none";
 errorMessage.style.display = "none";
 
-planningBtnAction.addEventListener("click",function() {
+function showPlanningView() {
   accueilVue.style.display = "none";
   planningVue.style.display = "block";
+}
+function generatePlanningCode(){
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+let code = "";
+
+  for (let i = 0; i < 6; i++){
+  const randomIndex = Math.floor(Math.random()*characters.length);
+  code = code + characters[randomIndex];
+  }
+  return code;
+}
+
+planningBtnAction.addEventListener("click", function (){
+  function showPlanningView();
+  
+  const nouvCode = generatePlanningCode();
+    console.log(nouvCode);
+  
+  planningCode.value = nouvCode;
 });
 
 planningCode.addEventListener("input",function(){
