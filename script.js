@@ -50,3 +50,9 @@ joinPlanningBtnAction.addEventListener("click",function() {
 
 const jours = ["Jour 1", "Jour 2", "Jour 3"];
 const periodes = ["Petit-déjeuner", "Matinée", "Déjeuner", "Après-midi", "Dîner", "Soirée"];
+for (let i = 0; i<periodes.lentgh ; i++){
+  console.log ("Lignes :", periodes[i]);
+  for (let j = 0; j < jours.lentgh ; j++){
+    console.log ("Colonnes :", jours[j]);
+  }
+}
